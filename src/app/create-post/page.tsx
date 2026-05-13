@@ -4,10 +4,23 @@ import {
   useEffect,
   useState,
 } from "react";
-"use client";
+import Link from "next/link";
 
+import ShareButton from "@/components/ShareButton";
+import SortBar from "@/components/SortBar";
+
+type SortOption = "hot" | "new" | "top";
 // add this below the "use client":
 export const dynamic = "force-dynamic";
+
+export async function HomePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ sort?: string }>;
+}) {
+  const { sort: sortParam } = await searchParams;
+  const sort = (sortParam ?? "new") as SortOption;
+}
 
 export default function CreatePostPage() {
 
