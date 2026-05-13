@@ -4,6 +4,10 @@ import { Prisma } from "@prisma/client";
 import ShareButton from "@/components/ShareButton";
 import SortBar from "@/components/SortBar";
 import VoteButtons from "@/components/VoteButtons";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 type PostWithRelations = Prisma.PostGetPayload<{
   include: {
     author: true;
