@@ -50,7 +50,7 @@ export default async function HomePage({
       </div>
     {/* Mobile-only create post bar */}
 <Link
-  href="/post/create"
+  href="/create-post"
   className="flex lg:hidden items-center gap-3 bg-zinc-900 border border-zinc-800 hover:border-orange-500 rounded-2xl p-3 transition"
 >
   <span className="flex-1 bg-zinc-800 text-zinc-500 text-sm rounded-xl px-3 py-2">

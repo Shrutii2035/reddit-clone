@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 Home
               </Link>
               <Link
-                href="/communities"
+                href="/create-community"
                 className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-zinc-800 transition text-zinc-100 font-bold text-sm"
               >
                 <span className="text-lg">👥</span>
@@ -99,7 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
             {/* Create Post — always visible, pinned above bottom */}
             <Link
-              href="/post/create"
+              href="/create-post"
               className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 transition text-white font-bold text-sm py-2.5 rounded-xl"
             >
               <span className="text-base leading-none">+</span>
@@ -128,14 +128,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </Link>
 
           <Link
-            href="/post/create"
+            href="/create-post"
             className="flex flex-col items-center justify-center w-12 h-12 rounded-full bg-orange-500 hover:bg-orange-400 transition text-white shadow-lg -mt-5"
           >
             <span className="text-2xl leading-none">+</span>
           </Link>
 
           <Link
-            href="/communities"
+            href="/create-community"
             className="flex flex-col items-center gap-0.5 text-zinc-400 hover:text-orange-400 transition text-xs"
           >
             <span className="text-xl">👥</span>

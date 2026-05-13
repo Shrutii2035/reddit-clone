@@ -1,5 +1,5 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import {
   useEffect,
   useState,
@@ -13,17 +13,8 @@ type SortOption = "hot" | "new" | "top";
 // add this below the "use client":
 export const dynamic = "force-dynamic";
 
-export async function HomePage({
-  searchParams,
-}: {
-  searchParams: Promise<{ sort?: string }>;
-}) {
-  const { sort: sortParam } = await searchParams;
-  const sort = (sortParam ?? "new") as SortOption;
-}
-
 export default function CreatePostPage() {
-
+const router = useRouter();
   const [title, setTitle] =
     useState("");
 
@@ -110,10 +101,12 @@ const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   const data = await response.json();
 
   if (!response.ok) {
+    setUploading(false);
     setError(data.error || "Failed to create post");
     return;
   }
-
+  setUploading(false);
+ router.push(`/post/${data.id}`);
   setSuccess("Post created successfully!");
   setError("");
 };
