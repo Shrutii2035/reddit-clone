@@ -45,7 +45,7 @@ export default async function HomePage({
     <div className="space-y-4">
 
       <div className="flex items-center justify-between mb-2">
-        <h1 className="text-2xl font-bold text-zinc-100">Home Feed</h1>
+        <h1 className="text-3xl font-bold text-zinc-100">Home Feed</h1>
         <SortBar />
       </div>
     {/* Mobile-only create post bar */}
@@ -60,6 +60,8 @@ export default async function HomePage({
     Post
   </span>
 </Link>
+<br></br>
+
 
       {posts.map((post) => (
         <div

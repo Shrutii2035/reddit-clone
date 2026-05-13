@@ -19,7 +19,9 @@ export default async function CommunityPage({
         slug,
       },
       include:{
+       
         posts:true,
+        
       },
     });
 
@@ -35,7 +37,7 @@ export default async function CommunityPage({
     <div className="max-w-2xl mx-auto mt-16">
 
       {/* Banner */}
-<div className="bg-orange-500 h-20 rounded-t-xl" />
+<div className="bg-orange-500 h-12 rounded-t-xl" />
 
 {/* Community Header */}
 <div className="bg-zinc-800 rounded-b-xl px-6 py-4 mb-8 border border-zinc-700">

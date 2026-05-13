@@ -26,7 +26,7 @@ export async function POST(req: Request) {
   postSchema.safeParse({
     title,
     content,
-    
+    communityId,
   });
 
 if (!validation.success) {
