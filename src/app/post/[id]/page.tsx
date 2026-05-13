@@ -27,6 +27,7 @@ export default async function PostPage({
         comments:true,
         votes: true,
       },
+     
     });
 if (!post) {
   return (
@@ -63,7 +64,7 @@ const score =
         {post.content}
       </p>
 
-      <VoteButtons postId={post.id} />
+      <VoteButtons postId={post.id} initialVotes={score} />
 
       <div className="mt-4 flex gap-3">
   <span className="bg-zinc-800 text-green-400 px-3 py-1 rounded-full text-sm font-medium">
