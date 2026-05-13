@@ -11,7 +11,7 @@ import SortBar from "@/components/SortBar";
 
 type SortOption = "hot" | "new" | "top";
 // add this below the "use client":
-export const dynamic = "force-dynamic";
+
 
 export default function CreatePostPage() {
 const router = useRouter();
