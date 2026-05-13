@@ -4,6 +4,10 @@ import {
   useEffect,
   useState,
 } from "react";
+"use client";
+
+// add this below the "use client":
+export const dynamic = "force-dynamic";
 
 export default function CreatePostPage() {
 
